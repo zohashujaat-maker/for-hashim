@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Hashim ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family:'Poppins', sans-serif; background: linear-gradient(135deg, #fff1f1, #ffd6d6, #ffeaea); overflow-x:hidden; position:relative; }
+section { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:50px 20px; transition: all 1s ease; }
+h1,h2 { font-family:'Playfair Display', serif; margin-bottom:20px; }
+h1 { font-size:3rem; color:#b71c1c; text-shadow: 2px 2px 5px #fff; animation:fadeSlide 1s ease forwards; }
+h2 { font-size:2rem; color:#7a1f1f; animation:fadeSlide 1.2s ease forwards; }
+p { max-width:700px; line-height:1.8; margin-bottom:20px; color:#5a0f0f; }
+button { background:#fff; border:2px solid #f28c8c; color:#b71c1c; padding:12px 28px; border-radius:30px; font-size:1rem; cursor:pointer; transition: all 0.3s ease; margin:8px; }
+button:hover { background:#b71c1c; color:#fff; transform:scale(1.05); }
+.hidden { display:none; opacity:0; transition: all 0.5s ease; }
+.card { background: rgba(255,255,255,0.85); padding:30px; border-radius:24px; max-width:800px; box-shadow: 0 20px 40px rgba(122,31,31,0.2); position:relative; overflow:hidden; }
+.popup { background:#fff0f0; border:2px solid #f28c8c; border-radius:20px; padding:20px; margin:12px 0; box-shadow: 0 8px 16px rgba(122,31,31,0.3); animation:fadeIn 0.6s ease forwards; position:relative; }
+@keyframes fadeIn { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+@keyframes fadeSlide { from {opacity:0; transform:translateY(-30px);} to {opacity:1; transform:translateY(0);} }
+
+/* Floating Hearts */
+.heart { position:absolute; font-size:1.5rem; animation: float 3s infinite ease-in-out; opacity:0.7; }
+@keyframes float { 0%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-10px) rotate(15deg);}100%{transform:translateY(0) rotate(0deg);} }
+
+/* Confetti */
+.confetti { position:absolute; width:10px; height:10px; background: #ff4c4c; top:0; left:50%; pointer-events:none; animation:confettiFall 1s linear forwards; border-radius:50%; }
+@keyframes confettiFall { 0%{transform:translateY(0) rotate(0deg);} 100%{transform:translateY(300px) rotate(720deg); opacity:0;} }
+
+.card-container { display:flex; flex-direction:column; gap:12px; margin-top:20px; }
+.quiz button { margin:6px; }
+
+/* Final love page */
+#finalLove { background: linear-gradient(135deg,#ffd6d6,#fff1f1); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:#b71c1c; }
+#finalLove h1 { font-size:4rem; text-shadow: 3px 3px 10px #fff; animation:fadeSlide 1.5s ease forwards; }
+#finalLove p { font-size:1.8rem; max-width:700px; line-height:2; margin-top:20px; animation:fadeSlide 1.8s ease forwards; }
+</style>
+</head>
+<body>
+
+<!-- Floating hearts -->
+<div class="heart" style="top:10%; left:20%; animation-duration:3s;">❤️</div>
+<div class="heart" style="top:30%; left:70%; animation-duration:4s;">💖</div>
+<div class="heart" style="top:50%; left:40%; animation-duration:3.5s;">💕</div>
+<div class="heart" style="top:70%; left:60%; animation-duration:4.5s;">💓</div>
+<div class="heart" style="top:80%; left:25%; animation-duration:5s;">💘</div>
+<div class="heart" style="top:20%; left:50%; animation-duration:4.2s;">💝</div>
+<div class="heart" style="top:60%; left:15%; animation-duration:3.8s;">💗</div>
+
+<!-- Landing -->
+<section id="landing">
+<h1>Happy New Year, Hashim ❤️</h1>
+<p>This is a love letter — broken into moments, wrapped in clicks, made just for you.</p>
+<button onclick="goTo('love')">Begin ✨</button>
+</section>
+
+<!-- Love Messages -->
+<section id="love" class="hidden">
+<h2>Every version of you...</h2>
+<div class="card card-container">
+<button onclick="reveal('l1')">Morning Grumpy Hashim</button>
+<div id="l1" class="popup hidden">I love you when you’re grumpy in the morning and don’t want to sweet talk — even though I do (hehe).</div>
+
+<button onclick="reveal('l2')">Sleepy but Caring</button>
+<div id="l2" class="popup hidden">I love you when you’re super sleepy, yet you stay up just to talk to me.</div>
+
+<button onclick="reveal('l3')">Full of Life</button>
+<div id="l3" class="popup hidden">I love you when you’re full of life — your laughter, your energy, your dreams.</div>
+
+<button onclick="reveal('l4')">Low Days</button>
+<div id="l4" class="popup hidden">I love you when you’re low or sad. Those are the moments I hold you closer.</div>
+
+<button onclick="reveal('l5')">Overthinking Mode</button>
+<div id="l5" class="popup hidden">I love you when you overthink — every thought reminds me of how deeply you care.</div>
+
+<button onclick="reveal('l6')">Safe Arms</button>
+<div id="l6" class="popup hidden">I love you when you hug me and we fit — perfectly nested in each other’s arms.</div>
+
+<p><strong>I love you for all that you are, all that you have been, and all that you will be.</strong> You are more than enough — for me, for everyone around you, but especially for me, Hashim.</p>
+</div>
+<button onclick="goTo('letter')">Next → My Heart ❤️</button>
+</section>
+
+<!-- Love Letter -->
+<section id="letter" class="hidden">
+<h2>My heart, in words ❤️</h2>
+<div class="card card-container">
+<p>Thank you for a beautiful year. I love you a lot — and I always will. Even when dirt covers my chest, it won’t be heavier than the love I carried for you.</p>
+<p>This year taught me that I’d walk through every painful part of my life again if I knew it’d be you waiting at the end of it.</p>
+<p>I knew I loved you when, even when I’m wrong or annoying, you don’t raise your voice — you communicate gently, help me, love me, and care for me.</p>
+<p>Thank you for being there for me, for restoring my belief in so many things. I will forever be proud of you. Even on days when you don’t have energy, you never fail to be the amazing human being that you are.</p>
+<p><strong>Hashim, you are like all the love I have ever poured into everyone — and somehow it has finally found its way back to me.</strong></p>
+<p>I adore you, Hashimu. I look forward to next year, and all the beautiful days waiting for us. ❤️</p>
+</div>
+<button onclick="goTo('memoriesFinal')">Next → Our Memories ❤️</button>
+</section>
+
+<!-- Memories & Numbers Page -->
+<section id="memoriesFinal" class="hidden">
+<h2>Our Beautiful Year Together 🌹✨</h2>
+<div class="card card-container">
+  <button onclick="reveal('mf1')">678 Hours of Calls</button>
+  <div id="mf1" class="popup hidden">Thank you for 678 hours of catching up, assurances, and most importantly, your presence, Hashim ❤️</div>
+
+  <button onclick="reveal('mf2')">4 Beautiful Bouquets</button>
+  <div id="mf2" class="popup hidden">The 4 beautiful bouquets you got me this year — I cherished every petal (please give me more hehe!)</div>
+
+  <button onclick="reveal('mf3')">397,475 Hugs & Embraces</button>
+  <div id="mf3" class="popup hidden">Every hug with you reset my heart. I cherish all 397,475 hugs we've shared 💕</div>
+
+  <button onclick="reveal('mf4')">84,774 Reels Sent</button>
+  <div id="mf4" class="popup hidden">Can you please see all the reels i have sent you from last year? hehe 😍</div>
+</div>
+<button onclick="goTo('finalLove')">Finally → My Hashim ❤️</button>
+</section>
+
+<!-- Full page I LOVE YOU -->
+<section id="finalLove" class="hidden">
+<h1>I LOVE YOU, MY HASHIM ❤️</h1>
+<p>You are my everything, my heart, my joy, my home. Forever and always, my love. 💖</p>
+</section>
+
+<script>
+// Section navigation
+function goTo(id){
+  document.querySelectorAll('section').forEach(sec => sec.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+  window.scrollTo(0,0);
+}
+
+// Reveal messages with confetti
+function reveal(id){
+  const el = document.getElementById(id);
+  el.classList.toggle('hidden');
+  if(!el.classList.contains('hidden')){
+    for(let i=0;i<10;i++){
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random()*90+'%';
+      confetti.style.background = ['#ff4c4c','#ff6f91','#ff99aa','#ffb6c1'][Math.floor(Math.random()*4)];
+      confetti.style.animationDuration = (Math.random()*1+0.8)+'s';
+      document.body.appendChild(confetti);
+      setTimeout(()=>confetti.remove(),1200);
+    }
+  }
+}
+</script>
+
+</body>
+</html>
